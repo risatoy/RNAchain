@@ -24,7 +24,7 @@ app.post("/", (req, res) => {
 	
 	// this launches the executable and returns immediately
 	var child = execFile(program,[gEnzyme, ucEnzyme], function (error, stdout, stderr) {
-    	res.render("index.ejs", {stdout: stdout});
+    	res.render("index.ejs", {stdout: "hi"});
 	});
 
 })
