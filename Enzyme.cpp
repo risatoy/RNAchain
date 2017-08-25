@@ -37,7 +37,7 @@ void Enzyme::findRNAChain(string g, string uc) {
         }
     }
 
-    for (int i = 0; i < gEnzyme.size(); i++) {
+    for (unsigned int i = 0; i < gEnzyme.size(); i++) {
         cout << gEnzyme[i] << " ";
     }
     cout << endl;
