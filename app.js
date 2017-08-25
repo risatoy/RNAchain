@@ -16,7 +16,7 @@ app.post("/", (req, res) => {
 	// standard node module
 	var execFile = require('child_process').execFile
 	// pathe to executable
-	var program = "../Example/RNAchain";
+	var program = "./RNAchain";
 
 	//from the browser
 	var gEnzyme = req.body.genzyme;
@@ -24,7 +24,7 @@ app.post("/", (req, res) => {
 	
 	// this launches the executable and returns immediately
 	var child = execFile(program,[gEnzyme, ucEnzyme], function (error, stdout, stderr) {
-    	res.render("index.ejs", {stdout: "hi"});
+    	res.render("index.ejs", {stdout: stdout});
 	});
 
 })
