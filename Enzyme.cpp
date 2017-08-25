@@ -127,6 +127,8 @@ void Enzyme::divideUCEnzyme(vector<string> ucEnzyme) {
 void Enzyme::findStartEndVertex() {
     list<string>::iterator it;
     string temp;
+
+    cout << "got here**" << endl;
     
     // find all the single fragments in gList and ucList and put them in list singleFragments
     for (unsigned int i = 0; i < gList.size(); i++) {
@@ -226,6 +228,4 @@ void Enzyme::findStartEndVertex() {
         
         singleFragments.pop_front();
     }
-
-    cout << start << "***" << end << endl;
 }
