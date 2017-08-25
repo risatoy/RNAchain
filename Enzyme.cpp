@@ -9,7 +9,7 @@
 #include <string>
 #include <vector>
 
-#include "Enzyme.h"
+#include "Graph.h"
 
 using namespace std;
 
