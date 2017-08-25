@@ -2,6 +2,7 @@
 //  Enzyme.h
 //
 //
+#pragma once
 
 class Enzyme : public Graph
 {

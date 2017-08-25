@@ -3,6 +3,8 @@
 //
 //
 
+#pragma once
+
 class Graph
 {
     int pathMax = 0;
