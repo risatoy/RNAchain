@@ -37,10 +37,9 @@ void Enzyme::findRNAChain(string g, string uc) {
         }
     }
 
-    for (unsigned int i = 0; i < gEnzyme.size(); i++) {
-        cout << gEnzyme[i] << " ";
+    for (unsigned int i = 0; i < ucEnzyme.size(); i++) {
+        cout << ucEnzyme[i] << endl;
     }
-    cout << endl;
     
     createEnzymeList();
     findStartEndVertex();
