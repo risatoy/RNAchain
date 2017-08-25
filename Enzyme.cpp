@@ -128,7 +128,7 @@ void Enzyme::findStartEndVertex() {
     list<string>::iterator it;
     string temp;
 
-    cout << "got here**" << endl;
+    cout << "this should be AU = " << gList[1] << endl;
     
     // find all the single fragments in gList and ucList and put them in list singleFragments
     for (unsigned int i = 0; i < gList.size(); i++) {
