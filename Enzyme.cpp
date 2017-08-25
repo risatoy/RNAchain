@@ -18,7 +18,7 @@ void Enzyme::findRNAChain(string g, string uc) {
     string tempInput;
     
     // Put G-Enzyme fragments in vector 'gEnzyme'
-    for (int i = 0; i < g.size(); i++) {
+    for (unsigned int i = 0; i < g.size(); i++) {
         tempInput += g[i];
         if (g[i + 1] == ',' || i + 1 == g.size()) {
             gEnzyme.push_back(tempInput);
@@ -28,7 +28,7 @@ void Enzyme::findRNAChain(string g, string uc) {
     }
     
     // Put U.C-Enzyme fragments in vector 'ucEnzyme'
-    for (int i = 0; i < uc.size(); i++) {
+    for (unsigned int i = 0; i < uc.size(); i++) {
         tempInput += uc[i];
         if (uc[i + 1] == ',' || i + 1 == uc.size()) {
             ucEnzyme.push_back(tempInput);
@@ -68,7 +68,7 @@ void Enzyme::divideGEnzyme(vector<string> gEnzyme) {
     string tmp;
     string::iterator it;
     
-    for (int i = 0; i < gEnzyme.size(); i++) {
+    for (unsigned int i = 0; i < gEnzyme.size(); i++) {
         for (it = gEnzyme[i].begin(); it != gEnzyme[i].end() ; it++) {
             tmp += *it;
             if (*it == 'U' || *it == 'C'|| it == gEnzyme[i].end() - 1) {
@@ -87,7 +87,7 @@ void Enzyme::divideUCEnzyme(vector<string> ucEnzyme) {
     string tmp;
     string::iterator it;
     
-    for (int i = 0; i < ucEnzyme.size(); i++) {
+    for (unsigned int i = 0; i < ucEnzyme.size(); i++) {
         for (it = ucEnzyme[i].begin(); it != ucEnzyme[i].end(); it++) {
             tmp += *it;
             if (*it == 'G' || it == ucEnzyme[i].end() -1) {
@@ -127,7 +127,7 @@ void Enzyme::findStartEndVertex() {
     string temp;
     
     // find all the single fragments in gList and ucList and put them in list singleFragments
-    for (int i = 0; i < gList.size(); i++) {
+    for (unsigned int i = 0; i < gList.size(); i++) {
         if (gList[i].size() == 1) {  // single fragments
             it = gList[i].begin();
             singleFragments.push_back(*it);
@@ -152,7 +152,7 @@ void Enzyme::findStartEndVertex() {
         }
     }
     
-    for (int j = 0; j < ucList.size(); j++) {
+    for (unsigned int j = 0; j < ucList.size(); j++) {
         if (ucList[j].size() == 1) {
             it = ucList[j].begin();
             singleFragments.push_back(*it);
@@ -182,7 +182,7 @@ void Enzyme::findStartEndVertex() {
     // find the ending and the beginning vertex by removing the interior extended bases from list singleFragments 
     
     //create midMap that hold all the interior extended bases, and count the numbers of the string that appeared
-    for (int i = 0, j = 0; i < gList.size() || j < ucList.size(); i++, j++) {
+    for (unsigned int i = 0, j = 0; i < gList.size() || j < ucList.size(); i++, j++) {
         if (gList[i].size() > 2) {
             for (it = next(gList[i].begin(), 1); it != prev(gList[i].end(), 1); it++) {
                 if (!mapMid.count(it -> c_str()))    //if the string is found in map mapMid, set int to 1
