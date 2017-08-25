@@ -39,8 +39,6 @@ void Enzyme::findRNAChain(string g, string uc) {
     
     createEnzymeList();
     findStartEndVertex();
-
-    cout << "start: " << start << " end: " << endl;
     
     printAllPaths(start, end);
     
@@ -128,7 +126,7 @@ void Enzyme::findStartEndVertex() {
     list<string>::iterator it;
     string temp;
 
-    cout << "this should be 2 = " << gList[1].size() << endl;
+    cout << "this should be 3 = " << gList[0].size() << endl;
     
     // find all the single fragments in gList and ucList and put them in list singleFragments
     for (unsigned int i = 0; i < gList.size(); i++) {
