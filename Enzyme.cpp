@@ -71,7 +71,7 @@ void Enzyme::divideGEnzyme(vector<string> gEnzyme) {
     string::iterator it;
     
     for (unsigned int i = 0; i < gEnzyme.size(); i++) {
-        for (it = gEnzyme[i].begin(); it != gEnzyme[i].end() ; it++) {
+        for (it = gEnzyme[i].begin(); it != gEnzyme[i].end(); it++) {
             tmp += *it;
             if (*it == 'U' || *it == 'C'|| it == gEnzyme[i].end() - 1) {
                 gList[i].push_back(tmp);
@@ -83,6 +83,12 @@ void Enzyme::divideGEnzyme(vector<string> gEnzyme) {
             }
         }
     }
+
+
+    map<int, std::list<std::string>>::iterator iter;
+    for (iter = gList.begin(); iter != gList.end(); iter++)
+        cout << iter -> first << endl;
+
 }
 
 void Enzyme::divideUCEnzyme(vector<string> ucEnzyme) {
