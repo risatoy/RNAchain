@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<link rel="stylesheet" href="css/styles.css">
+ 	<title>RNA Chain</title>
+</head>
+<body>
+<div>
+        <h1>Find all possible RNA chains.</h1>
+        <div class="inputbox">
+        <form action="/" method="POST">
+            <div class="box1"> Type G-enzyme framgments: 
+                <input type="text" id="genzyme" name="genzyme" placeholder="Separate by , (Ex: AUCG,AUG,G)"> 
+            </div>
+            <div class="box1"> Type U.C-enzyme fragments: 
+                <input type="text" id="ucenzyme" name="ucenzyme" placeholder="Separate by , (Ex: GGAC,U,AU)"> 
+            </div>
+
+            <div class="box1"> <button id="enterButton">Enter</button> </div>
+        </form>
+        </div>
+
+        <div class="outputbox">
+            <div class="box1"> 
+                All possible original RNA chains are:  <br />
+                <div id="output">
+                    <%= stdout %>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
