@@ -83,12 +83,6 @@ void Enzyme::divideGEnzyme(vector<string> gEnzyme) {
             }
         }
     }
-
-
-    map<int, std::list<std::string>>::iterator iter;
-    for (iter = gList.begin(); iter != gList.end(); iter++)
-        cout << iter -> second << endl;
-
 }
 
 void Enzyme::divideUCEnzyme(vector<string> ucEnzyme) {
@@ -232,4 +226,6 @@ void Enzyme::findStartEndVertex() {
         
         singleFragments.pop_front();
     }
+
+    cout << start << "***" << end << endl;
 }
