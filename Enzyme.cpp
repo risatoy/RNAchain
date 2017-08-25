@@ -9,8 +9,8 @@
 #include <string>
 #include <vector>
 
-#include "Enzyme.h"
 #include "Graph.h"
+#include "Enzyme.h"
 
 using namespace std;
 
