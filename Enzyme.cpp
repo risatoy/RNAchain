@@ -40,7 +40,8 @@ void Enzyme::findRNAChain(string g, string uc) {
     createEnzymeList();
     findStartEndVertex();
 
-    cout << start << " : " << end << endl;
+    start = "AU";
+    end = "U";
     
     printAllPaths(start, end);
     
