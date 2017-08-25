@@ -17,7 +17,7 @@ void Enzyme::findRNAChain(string g, string uc) {
     
     string tempInput;
 
-    cout << "got the inputs!" << endl;
+    cout << g << " : " << uc << endl;
     
     // Put G-Enzyme fragments in vector 'gEnzyme'
     for (unsigned int i = 0; i < g.size(); i++) {
