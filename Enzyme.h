@@ -4,6 +4,8 @@
 //
 #pragma once
 
+#include "Graph.h"
+
 class Enzyme : public Graph
 {
 private:
