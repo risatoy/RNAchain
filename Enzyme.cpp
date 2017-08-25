@@ -36,13 +36,11 @@ void Enzyme::findRNAChain(string g, string uc) {
             tempInput.clear();
         }
     }
-
-    for (unsigned int i = 0; i < ucEnzyme.size(); i++) {
-        cout << ucEnzyme[i] << endl;
-    }
     
     createEnzymeList();
     findStartEndVertex();
+
+    cout << "start: " << start << " end: " << endl;
     
     printAllPaths(start, end);
     
