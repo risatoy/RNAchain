@@ -14,7 +14,7 @@ private:
     
     std::list<std::string> singleFragments;
     std::map<std::string, int> mapMid;
-    std::string start, end;
+    std::string start = "AU", end = "U";
     
     void createEnzymeList();
     void divideGEnzyme(std::vector<std::string> gEnzyme);
