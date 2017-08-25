@@ -39,9 +39,6 @@ void Enzyme::findRNAChain(string g, string uc) {
     
     createEnzymeList();
     findStartEndVertex();
-
-    start = "AU";
-    end = "U";
     
     printAllPaths(start, end);
     
