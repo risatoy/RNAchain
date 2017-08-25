@@ -87,7 +87,7 @@ void Enzyme::divideGEnzyme(vector<string> gEnzyme) {
 
     map<int, std::list<std::string>>::iterator iter;
     for (iter = gList.begin(); iter != gList.end(); iter++)
-        cout << iter -> first << endl;
+        cout << iter -> second << endl;
 
 }
 
