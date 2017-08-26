@@ -1,5 +1,5 @@
 body {
-  
+  padding: 30px;
 }
 
 h1 {
@@ -35,5 +35,14 @@ button {
 	height: 100%;
 	margin: 10px 20px;
 	padding: 20px;
-	outline: 0.0001px solid #b7b5b5;
+}
+
+#sampleinput {
+	background-color: #F7F8FA;
+	width: 55%;
+	margin: 20px;
+	padding: 2px 5px;
+	border-radius: 5px;
+	font-size: small;
+	color: #808080;
 }
