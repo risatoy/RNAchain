@@ -28,8 +28,6 @@ void Graph::addEdge(string u, string v, string e) {
 
 void Graph::printAllPaths(string s, string d) {
     map<string, int> visited;
-
-    cout << "yay Im here! s: "<< s << " d: " << d << endl;
     
     map<int, string> path;
     int path_index = 0; // Initialize path[] as empty

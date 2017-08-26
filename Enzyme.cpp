@@ -39,6 +39,25 @@ void Enzyme::findRNAChain(string g, string uc) {
     }
     
     createEnzymeList();
+
+
+    list<string>::iterator iter;
+    cout << "gList:" << endl;
+    for (int i = 0; i < gList.size(); i++) {
+        for (iter = gList[i].begin(); iter != gList[i].end(); iter++) {
+            cout << iter->data() << " -> ";
+        }
+        cout << "null" << endl;
+    }
+
+    cout << "ucList:" << endl;
+    for (int i = 0; i < ucList.size(); i++) {
+        for (iter = ucList[i].begin(); iter != ucList[i].end(); iter++) {
+            cout << iter->data() << " -> ";
+        }
+        cout << "null" << endl;
+    }
+
     findStartEndVertex();
     
     printAllPaths(start, end);
