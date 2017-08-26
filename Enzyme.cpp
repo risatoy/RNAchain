@@ -203,6 +203,7 @@ void Enzyme::findStartEndVertex() {
             singleFragments.erase(it);
             cout << "just erased " << it -> c_str() << " from singleFragments" << endl;
             mapMid[it -> c_str()]--;
+            cout << mapMid[it -> c_str()] << endl;
         }
     }
     
