@@ -198,16 +198,14 @@ void Enzyme::findStartEndVertex() {
     }
        
     // remove from the list singleFragments if the string found in midMap
-    cout << "singleFragments: ";
-    for (it = singleFragments.begin(); it != singleFragments.end(); it++) {
-        cout << it->data() << " -> ";
-        singleFragments.erase(it);
-        cout << "just erased " << it -> c_str() << " from singleFragments" << endl;
-        /*if (mapMid.count(it -> data()) && mapMid[it -> data()] > 0) {
-            singleFragments.erase(it);
-            //cout << "just erased " << it -> c_str() << " from singleFragments" << endl;
+    it = singleFragments.begin();
+    while (it != singleFragments.end()) {
+        if (mapMid.count(it -> data()) && mapMid[it -> data()] > 0) {
             mapMid[it -> data()]--;
-        }*/
+            it = singleFragments.erase(it);
+        }
+        else
+            it++;
     }
     cout << "null" << endl;
     
@@ -217,6 +215,12 @@ void Enzyme::findStartEndVertex() {
         cout << itmapMid->first << "| " << itmapMid->second << endl;
     }
     cout << endl;
+
+     /*** print out singleFragments ***/
+    for (it = singleFragments.begin(); it != singleFragments.end(); it++) {
+        cout << it->data() << " -> ";
+    }
+    cout << "null" << endl;
 
     
     
