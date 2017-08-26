@@ -196,15 +196,7 @@ void Enzyme::findStartEndVertex() {
             }
         }
     }
-
-    /*** print out mapMid ***/
-    map<string, int>::iterator itmapMid;
-    for (itmapMid = mapMid.begin(); itmapMid != mapMid.end(); itmapMid++) {
-        cout << itmapMid->first << "| " << itmapMid->second;
-    }
-    cout << endl;
-    
-    
+       
     // remove from the list singleFragments if the string found in midMap
     for (it = singleFragments.begin(); it != singleFragments.end(); it++) {
         if (mapMid.count(it -> c_str()) && mapMid[it -> c_str()] > 0) {
