@@ -175,13 +175,6 @@ void Enzyme::findStartEndVertex() {
         }
     }
     
-    /*** print out singleFragments ***/
-    for (it = singleFragments.begin(); it != singleFragments.end(); it++) {
-        cout << it->data() << " -> ";
-    }
-    cout << "null" << endl;
-    
-    
     // find the ending and the beginning vertex by removing the interior extended bases from list singleFragments 
     
     //create midMap that hold all the interior extended bases, and count the numbers of the string that appeared
@@ -213,6 +206,12 @@ void Enzyme::findStartEndVertex() {
         }
     }
     
+
+    /*** print out singleFragments ***/
+    for (it = singleFragments.begin(); it != singleFragments.end(); it++) {
+        cout << it->data() << " -> ";
+    }
+    cout << "null" << endl;
     
     
     
