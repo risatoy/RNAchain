@@ -39,25 +39,6 @@ void Enzyme::findRNAChain(string g, string uc) {
     }
     
     createEnzymeList();
-
-
-    list<string>::iterator iter;
-    cout << "gList:" << endl;
-    for (unsigned int i = 0; i < gList.size(); i++) {
-        for (iter = gList[i].begin(); iter != gList[i].end(); iter++) {
-            cout << iter->data() << " -> ";
-        }
-        cout << "null" << endl;
-    }
-
-    cout << "ucList:" << endl;
-    for (unsigned int i = 0; i < ucList.size(); i++) {
-        for (iter = ucList[i].begin(); iter != ucList[i].end(); iter++) {
-            cout << iter->data() << " -> ";
-        }
-        cout << "null" << endl;
-    }
-
     findStartEndVertex();
     
     printAllPaths(start, end);
@@ -194,6 +175,11 @@ void Enzyme::findStartEndVertex() {
         }
     }
     
+    /*** print out singleFragments ***/
+    for (it = singleFragments.begin(); it != singleFragments.end(); it++) {
+        cout << it->data() << " -> ";
+    }
+    cout << "null" << endl;
     
     
     // find the ending and the beginning vertex by removing the interior extended bases from list singleFragments 
