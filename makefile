@@ -6,7 +6,7 @@ CFLAGS = -c -Wall
 # EXECUTABLE_NAME is the name of the program to run
 # SOURCES should include all the .cpp files to compile
 EXECUTABLE_NAME = RNAchain
-SOURCES = main.cpp Graph.cpp Enzyme.cpp
+SOURCES = ./c++/main.cpp ./c++/Graph.cpp ./c++/Enzyme.cpp
 OBJECTS = $(SOURCES:.cpp=.o)
 
 all: $(EXECUTABLE_NAME)
