@@ -207,23 +207,7 @@ void Enzyme::findStartEndVertex() {
         else
             it++;
     }
-    cout << "null" << endl;
-    
-    /*** print out mapMid ***/
-    map<string, int>::iterator itmapMid;
-    for (itmapMid = mapMid.begin(); itmapMid != mapMid.end(); itmapMid++) {
-        cout << itmapMid->first << "| " << itmapMid->second << endl;
-    }
-    cout << endl;
 
-     /*** print out singleFragments ***/
-    for (it = singleFragments.begin(); it != singleFragments.end(); it++) {
-        cout << it->data() << " -> ";
-    }
-    cout << "null" << endl;
-
-    
-    
     while (!singleFragments.empty()) {    //find the start node
         string temp = singleFragments.front();
         
