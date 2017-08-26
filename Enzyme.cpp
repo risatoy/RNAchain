@@ -43,7 +43,7 @@ void Enzyme::findRNAChain(string g, string uc) {
 
     list<string>::iterator iter;
     cout << "gList:" << endl;
-    for (int i = 0; i < gList.size(); i++) {
+    for (unsigned int i = 0; i < gList.size(); i++) {
         for (iter = gList[i].begin(); iter != gList[i].end(); iter++) {
             cout << iter->data() << " -> ";
         }
@@ -51,7 +51,7 @@ void Enzyme::findRNAChain(string g, string uc) {
     }
 
     cout << "ucList:" << endl;
-    for (int i = 0; i < ucList.size(); i++) {
+    for (unsigned int i = 0; i < ucList.size(); i++) {
         for (iter = ucList[i].begin(); iter != ucList[i].end(); iter++) {
             cout << iter->data() << " -> ";
         }
