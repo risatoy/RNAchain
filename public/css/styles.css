@@ -35,6 +35,7 @@ button {
 	height: 100%;
 	margin: 10px 20px;
 	padding: 20px;
+	outline: 0.0001px solid #b7b5b5;
 }
 
 #sampleinput {
