@@ -67,18 +67,17 @@ void Enzyme::createEnzymeList() {
 
 void Enzyme::divideGEnzyme(vector<string> gEnzyme) {
     string tmp;
-    string::iterator it;
-    
+
     for (unsigned int i = 0; i < gEnzyme.size(); i++) {
-        for (it = gEnzyme[i].begin(); it != gEnzyme[i].end(); it++) {
-            tmp += *it;
-            if (*it == 'U' || *it == 'C'|| it == gEnzyme[i].end() - 1) {
+        for (unsigned int j = 0; j < gEnzyme[i].size(); j++) {
+            tmp += gEnzyme[i][j];
+            if (gEnzyme[i][j] == 'U' || gEnzyme[i][j] == 'C'|| j == gEnzyme[i].size()-1) {
                 gList[i].push_back(tmp);
                 tmp.clear();
             }
             
-            if (it == gEnzyme[i].end() -1 && *it != 'G') {  //Find the ending vertex
-                end = gEnzyme[i];
+            if (j == gEnzyme[i].size()-1 && gEnzyme[i][j] != 'G') { //Find the ending vertex
+              end = gEnzyme[i];
             }
         }
     }
@@ -86,22 +85,20 @@ void Enzyme::divideGEnzyme(vector<string> gEnzyme) {
 
 void Enzyme::divideUCEnzyme(vector<string> ucEnzyme) {
     string tmp;
-    string::iterator it;
-    
+
     for (unsigned int i = 0; i < ucEnzyme.size(); i++) {
-        for (it = ucEnzyme[i].begin(); it != ucEnzyme[i].end(); it++) {
-            tmp += *it;
-            if (*it == 'G' || it == ucEnzyme[i].end() -1) {
+        for (unsigned int j = 0; j < ucEnzyme[i].size(); j++) {
+            tmp += ucEnzyme[i][j];
+            if (ucEnzyme[i][j] == 'G' || j == ucEnzyme[i].size()-1) {
                 ucList[i].push_back(tmp);
                 tmp.clear();
             }
             
-            if (it == ucEnzyme[i].end() -1 && *it != 'U') {  //Find the end vertex
-                if (*it != 'C') {
+            if (j == ucEnzyme[i].size()-1 && ucEnzyme[i][j] != 'U') { //Find the ending vertex
+                if (ucEnzyme[i][j] != 'C') {
                     end = ucEnzyme[i];
                 }
             }
-            
         }
     }
 }
