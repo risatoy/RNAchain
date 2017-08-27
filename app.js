@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
-	res.render("index.ejs", {gEnzyme: "", stdout: ""});
+	res.render("index.ejs", {gEnzyme: "", ucEnzyme: "", stdout: ""});
 })
 
 app.post("/", (req, res) => {
@@ -24,7 +24,7 @@ app.post("/", (req, res) => {
 	
 	// this launches the executable and returns immediately
 	var child = execFile(program,[gEnzyme, ucEnzyme], function (error, stdout, stderr) {
-    	res.render("index.ejs", {gEnzyme: gEnzyme, stdout: stdout});
+    	res.render("index.ejs", {gEnzyme: gEnzyme, ucEnzyme: ucEnzyme, stdout: stdout});
 	});
 
 })
