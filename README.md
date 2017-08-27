@@ -1,4 +1,4 @@
-# [Find all possible RNA chain](https://lit-harbor-79782.herokuapp.com/)
+# [Find all possible RNA chain](https://sheltered-island-17339.herokuapp.com/)
 
 constructs all the possible original RNA chains from given fragments. program written in C++
 
@@ -7,7 +7,7 @@ constructs all the possible original RNA chains from given fragments. program wr
 
 ## Website C++ embeded
 
-* [Find all possible RNA chain](https://lit-harbor-79782.herokuapp.com/)
+* [Find all possible RNA chain](https://sheltered-island-17339.herokuapp.com/)
 
    embeded C++ code on the website with Node.js
 
