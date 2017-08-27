@@ -3,13 +3,6 @@
 <head>
  	<link rel="stylesheet" href="css/styles.css">
  	<title>RNA Chain</title>
-
-    <script type="text/javascript">
-        function keepInputs() {
-            document.getElementByID('genzyme').value = "hellooo";
-            document.getElementByID('ucenzyme').value = "hellooo";
-        }
-    </script>
 </head>
 <body>
 <div>
@@ -26,10 +19,10 @@
         <div class="inputbox">
         <form action="/" method="POST">
             <div class="box1"> Type G-enzyme framgments: 
-                <input type="text" id="genzyme" name="genzyme" placeholder="Separate by , (Ex: AUCG,AUG,G)"> 
+                <input type="text" id="genzyme" name="genzyme" placeholder="Separate by , (Ex: AUCG,AUG,G)" value="hello"> 
             </div>
             <div class="box1"> Type U.C-enzyme fragments: 
-                <input type="text" id="ucenzyme" name="ucenzyme" placeholder="Separate by , (Ex: GGAC,U,AU)"> 
+                <input type="text" id="ucenzyme" name="ucenzyme" placeholder="Separate by , (Ex: GGAC,U,AU)" value="hey"> 
             </div>
 
             <div class="box1"> <button id="enterButton" onclick="keepInputs();">Enter</button> </div>
