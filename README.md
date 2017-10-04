@@ -7,6 +7,10 @@ constructs all the possible original RNA chains from given fragments. program wr
 
 ## Website C++ embeded
 
+
+![main.png](images/rnachain_screenshot.jpg)
+
+
 * [Find all possible RNA chain](https://sheltered-island-17339.herokuapp.com/)
 
    embeded C++ code on the website with Node.js
